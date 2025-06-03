@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Smooth fade when switching themes */
+html,
+html * {
+    transition: color 500ms ease-in-out,
+        background-color 500ms ease-in-out,
+        border-color 500ms ease-in-out;
+}
