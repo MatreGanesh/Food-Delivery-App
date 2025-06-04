@@ -11,6 +11,7 @@ export default function Categories({ setSelectedCategory }) {
         const fetchFoodItems = async () => {
             try {
                 const response = await axios.get(`${process.env.REACT_APP_API_BASE}/food_menu/all_category`);
+                // console.log("Category :", response.data.category)
                 if (response.data.success) {
                     setCategory(response.data.category);
                 }
