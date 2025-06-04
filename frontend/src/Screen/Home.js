@@ -45,9 +45,10 @@ export default function Home() {
             {/* Category Selection */}
             <Categories setSelectedCategory={setSelectedCategory} />
 
-            <div className='dark:bg-gray-900 px-4 py-6'>
-                <h2 className='text-2xl text-center font-bold text-gray-800 dark:text-white mb-6'>
-                    <span className='border-orange-500 border-b-4 pr-2 pb-1'>
+            <div className=" dark:bg-gray-900 px-4 py-6 flex-col justify-center m-auto">
+
+                <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">
+                    <span className="border-orange-500 border-b-4 px-4 pr-2 pb-1">
                         🍽️ {selectedCategory}
                     </span>
                 </h2>
@@ -57,16 +58,36 @@ export default function Home() {
                         No items found in this category.
                     </p>
                 ) : (
-                    <div className="w-full flex justify-center">
-                        <div className="flex flex-wrap justify-start gap-6 w-[95%]">
-                            {filteredItems.map((menuItem, index) => (
-                                <Card key={menuItem._id || index} menuItems={menuItem} loading={loading} />
-                            ))}
-                        </div>
+                    <div className="flex flex-wrap justify-center gap-6">
+                        {filteredItems.map((menuItem, index) => (
+                            <Card key={menuItem._id || index} menuItems={menuItem} loading={loading} />
+                        ))}
                     </div>
                 )}
             </div>
-        </div>
+
+
+
+            {/* <div className='dark:bg-gray-900 px-4 py-6'>
+                <h2 className='text-2xl font-bold text-gray-800 dark:text-white mb-6'>
+                    <span className='border-orange-500 border-b-4 px-4 pr-2 pb-1'>
+                        🍽️ {selectedCategory}
+                    </span>
+                </h2>
+
+                {filteredItems.length === 0 ? (
+                    <p className="text-gray-500 dark:text-gray-300">
+                        No items found in this category.
+                    </p>
+                ) : (
+                    <div className="flex flex-wrap justify-start gap-6">
+                        {filteredItems.map((menuItem, index) => (
+                            <Card key={menuItem._id || index} menuItems={menuItem} loading={loading} />
+                        ))}
+                    </div>
+                )}
+            </div> */}
+        </div >
     );
 }
 

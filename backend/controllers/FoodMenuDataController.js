@@ -53,7 +53,7 @@ const createFoodItem = async (req, res) => {
     try {
         const { category, name, img, options, description } = req.body;
 
-        console.log(category, name, img, options, description)
+        // console.log(category, name, img, options, description)
 
         if (!category || !name || !img || !options || !description) {
             return res.status(400).json({ error: 'All fields are required' });
