@@ -2,7 +2,7 @@ const FoodCategoryName = require("../models/FoodCategory.js");
 const FoodMenuData = require("../models/FoodMenuData.js");
 
 
-//Set Food Category
+//Post Food Category
 const createCategoryItem = async (req, res) => {
     try {
         const { categoryName, image } = req.body;
@@ -33,12 +33,12 @@ const createCategoryItem = async (req, res) => {
     }
 }
 
-//fetch Food Category
+//Get Food Category
 const getFoodCategory = async (req, res) => {
     try {
 
         const category = await FoodCategoryName.find({});
-        console.log(category);
+        // console.log(category);
 
         res.status(200).json({ success: true, message: 'Category Fetch Successfully!', category });
 
@@ -48,7 +48,7 @@ const getFoodCategory = async (req, res) => {
     }
 }
 
-//Set Food Items Menu
+//Post Food Items Menu
 const createFoodItem = async (req, res) => {
     try {
         const { category, name, img, options, description } = req.body;
@@ -89,11 +89,11 @@ const createFoodItem = async (req, res) => {
 };
 
 
-//fetch All Food Items
+//Get All Food Items
 const getFoodMenu = async (req, res) => {
     try {
 
-        console.log("hhhhh");
+        // console.log("hhhhh");
         const foodCategory = await FoodCategoryName.find({});
         const foodItem = await FoodMenuData.find({});
 

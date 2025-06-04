@@ -9,6 +9,7 @@ import Footer from './Components/Footer';
 import SignUp from './LogIn_SignUp/SignUp';
 import Cart from './Screen/Cart';
 import MyOrder from './Screen/MyOrders';
+import AddMenuItems from './Admin/AddMenuItems';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <Route path='/login' element={<Login />} />
               <Route path='/register' element={<SignUp />} />
               <Route path='/myOrder' element={<MyOrder />} />
+              <Route path='/add_Menu_Item' element={<AddMenuItems />} />
             </Routes>
           </main>
 

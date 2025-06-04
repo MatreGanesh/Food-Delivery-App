@@ -72,9 +72,6 @@ export default function Card({ menuItems, loading }) {
         setSize(priceRef.current.value)
     }, [])
 
-    // useEffect(() => {
-    // }, [data]);
-
 
     if (loading) {
         return (

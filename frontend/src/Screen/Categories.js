@@ -24,6 +24,19 @@ export default function Categories({ setSelectedCategory }) {
         fetchFoodItems();
     }, []);
 
+
+    if (loading) {
+        return (
+            <div className='text-center text-lg text-blue-500 font-bold w-full'>
+                <h1 className='flex items-center justify-center gap-2 p-6'>
+                    <ImSpinner9 className='w-5 h-5 text-red-500 animate-spin' />
+                    Loading...
+                </h1>
+            </div>
+        )
+    }
+
+
     return (
         <div className='flex justify-center'>
             <div className='dark:text-white container p-5 space-y-5'>
