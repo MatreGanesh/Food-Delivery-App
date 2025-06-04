@@ -89,7 +89,7 @@ const createFoodItem = async (req, res) => {
 };
 
 
-//Get All Food Items
+//fetch All Food Items
 const getFoodMenu = async (req, res) => {
     try {
 
